@@ -1,0 +1,62 @@
+# ================= BUILD =================
+target/
+build/
+*.log
+logs/
+*.out
+
+# ================= MAVEN =================
+.mvn/wrapper/maven-wrapper.jar
+
+# ================= IDE =================
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+
+# ================= STS =================
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# ================= NETBEANS =================
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ================= OS =================
+.DS_Store
+Thumbs.db
+
+# ================= ENV / SECRETS =================
+.env
+.env.*
+*.env
+
+# ================= SPRING CONFIG (CRITICAL) =================
+# Block local properties — has real secrets
+**/application.properties
+**/application.yml
+**/application-local.properties
+**/application-local.yml
+
+# ✅ ALLOW — only contain ${ENV_VAR} placeholders, safe to commit
+!**/application-docker.properties
+!**/application-prod.properties
+
+# ================= LOGS =================
+*.log
+logs/
+*.gz
+
+# ================= SECURITY =================
+*.pem
+*.key
+*.crt
